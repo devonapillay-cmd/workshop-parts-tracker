@@ -1,0 +1,17 @@
+{
+  "name": "Workshop Parts Tracker",
+  "short_name": "Parts Tracker",
+  "description": "Track parts needed, ordered and received.",
+  "start_url": "/parts",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

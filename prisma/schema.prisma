@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum PartStatus {
+  NEEDED
+  ORDERED
+  RECEIVED
+}
+
+model PartRequest {
+  id            String     @id @default(uuid())
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  partName      String
+  quantity      Int        @default(1)
+  status        PartStatus @default(NEEDED)
+  supplier      String?
+  jobRef        String?
+  customerName  String?
+  priceEstimate Decimal?
+  notes         String?
+}
